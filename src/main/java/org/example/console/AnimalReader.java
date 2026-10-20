@@ -19,7 +19,7 @@ public class AnimalReader {
     public Animal readAnimal() {
         String species = readSpecies();
         String name = input.readNonEmptyString("Name: ");
-        int age = input.readInt("Age: ");
+        int age = input.readNonNegativeInt("Age: ");
 
         return animalFactory.create(species, name, age);
     }

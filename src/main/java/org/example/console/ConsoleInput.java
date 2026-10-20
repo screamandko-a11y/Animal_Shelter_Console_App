@@ -6,7 +6,7 @@ import java.util.Scanner;
 
 
 // this class handles user inputs from the console
-//
+
 @RequiredArgsConstructor
 public class ConsoleInput {
     private final Scanner scanner;
@@ -17,12 +17,28 @@ public class ConsoleInput {
             if (!value.isEmpty()) {
                 return value;
             }
-            System.out.println("Value cannot be empty.");
+            System.out.println("Value cannot be empty");
         }
     }
 
     public int readInt(String prompt) {
-        return Integer.parseInt(readLine(prompt));
+        while (true) {
+            try {
+                return Integer.parseInt(readLine(prompt));
+            } catch (NumberFormatException e) {
+                System.out.println("Enter a valid whole number");
+            }
+        }
+    }
+
+    public int readNonNegativeInt(String prompt) {
+        while (true) {
+            int value = readInt(prompt);
+            if (value >= 0) {
+                return value;
+            }
+            System.out.println("Value cannot be negative");
+        }
     }
 
     public String readChoice(String prompt, String... choices) {
@@ -37,7 +53,7 @@ public class ConsoleInput {
                     return choice;
                 }
             }
-            System.out.println("Choose one of: " + String.join(", ", choices) + ".");
+            System.out.println("Choose one of :" + String.join(", ", choices) + ".");
         }
     }
 

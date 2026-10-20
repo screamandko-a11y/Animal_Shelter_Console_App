@@ -1,7 +1,7 @@
 package org.example.model;
 
 
-// new other type of animal
+// new other type of animal - Mouse
 public final class Mouse extends Animal {
 
     public Mouse(AnimalId id, String name, int age){
