@@ -20,11 +20,6 @@ public class ConsoleMenu {
     // loop menu start here, every case calls correct Shelter methods
     public void start(){
 
-        // TODO:
-        // Show menu in a loop
-        // Read user input
-        // Call correct 'Shelter' methods based on selected option
-
         while (true) {
             printMenu();
             String choice = input.readNonEmptyString("Choose an option: ");
@@ -34,7 +29,7 @@ public class ConsoleMenu {
                 case "2" -> shelter.getAllAnimals();
                 case "3" -> shelter.findBySpecies();
                 case "4" -> shelter.findAvailableAnimals();
-               // case "5" -> shelter.markAsAdopted();
+               //case "5" -> shelter.markAsAdopted(); // incomplete function
                 case "0" -> {
                     System.out.println("Goodbye!");
                     return;
