@@ -3,6 +3,7 @@ package org.example.shelter;
 import org.example.console.AnimalReader;
 import org.example.console.ConsoleInput;
 import org.example.model.Animal;
+import org.example.model.AdoptionStatus;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -40,10 +41,19 @@ public class Shelter <T extends Animal>{
         }
     }
 
-    public List<T> findAvailableAnimals(){
-        // TODO
-        return null;
+    public List<T> findAvailableAnimals() {
+        List<T> availableAnimals = new ArrayList<>();
+
+        for (T animal : animals) {
+            if (animal.getAdoptionStatus() == AdoptionStatus.AVAILABLE) {
+                availableAnimals.add(animal);
+            }
+        }
+        System.out.println(availableAnimals);
+        return availableAnimals;
     }
+
+
 
     public void markAsAdopted(String id){
         // TODO

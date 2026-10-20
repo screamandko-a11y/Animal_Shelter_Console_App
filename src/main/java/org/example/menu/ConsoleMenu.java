@@ -33,6 +33,8 @@ public class ConsoleMenu {
                 case "1" -> shelter.addAnimal(animalReader.readAnimal());
                 case "2" -> shelter.getAllAnimals();
                 case "3" -> shelter.findBySpecies();
+                case "4" -> shelter.findAvailableAnimals();
+               // case "5" -> shelter.markAsAdopted();
                 case "0" -> {
                     System.out.println("Goodbye!");
                     return;
