@@ -22,31 +22,8 @@ public class ConsoleInput {
         }
     }
 
-    public int readInt(String prompt, int min, int max) {
-        if (min > max) {
-            int temporary = min;
-            min = max;
-            max = temporary;
-        }
-
-        while (true) {
-            System.out.print(prompt);
-            if (scanner.hasNextInt()) {
-                int value = scanner.nextInt();
-                String remaining = scanner.nextLine().trim();
-
-                if (!remaining.isEmpty()) {
-                    System.out.println("Value must be an integer.");
-                } else if (value >= min && value <= max) {
-                    return value;
-                } else {
-                    System.out.println("Value must be between " + min + " and " + max + ".");
-                }
-            } else {
-                scanner.nextLine();
-                System.out.println("Value must be an integer.");
-            }
-        }
+    public int readInt(String prompt) {
+        return Integer.parseInt(readLine(prompt));
     }
 
     public String readChoice(String prompt, String... choices) {

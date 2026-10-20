@@ -21,7 +21,7 @@ public class AnimalReader {
     public Animal readAnimal() {
         String species = readSpecies();
         String name = input.readNonEmptyString("Name: ");
-        int age = input.readInt("Age: ", 0, Integer.MAX_VALUE);
+        int age = input.readInt("Age: ");
 
         return animalFactory.create(species, name, age);
     }
