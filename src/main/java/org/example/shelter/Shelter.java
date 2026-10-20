@@ -16,15 +16,19 @@ public class Shelter <T extends Animal>{
         this.animalReader = new AnimalReader(input);
     }
 
+
+    // add animal to the shelter
     public void addAnimal(T animal){
         animals.add(animal);
     }
 
+    // print and return List of the Animals
     public List<T> getAllAnimals(){
         System.out.println("All animals in shelter :" + animals);
         return animals;
     }
 
+    // print and return the List of Animals sorted by Species
     public void findBySpecies() {
         String species = animalReader.readSpecies();
         boolean found = false;
@@ -41,6 +45,7 @@ public class Shelter <T extends Animal>{
         }
     }
 
+    // print and return the List of Available Animals
     public List<T> findAvailableAnimals() {
         List<T> availableAnimals = new ArrayList<>();
 
@@ -55,7 +60,7 @@ public class Shelter <T extends Animal>{
 
 
 
-    public void markAsAdopted(String id){
-        // TODO
-    }
+   // public void markAsAdopted(String id){
+
+    //}
 }
