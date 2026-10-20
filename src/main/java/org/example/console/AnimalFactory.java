@@ -6,7 +6,7 @@ import org.example.model.Bird;
 import org.example.model.Cat;
 import org.example.model.Dog;
 
-/** Creates animals from supplied details without console input. */
+// creates animals from supplied details without console input
 public class AnimalFactory {
     public Animal create(String species, String name, int age) {
         AnimalId id = new AnimalId();

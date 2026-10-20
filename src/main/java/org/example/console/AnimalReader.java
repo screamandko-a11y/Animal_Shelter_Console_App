@@ -3,7 +3,7 @@ package org.example.console;
 import org.example.model.Animal;
 
 
-// Reads animal details from the console and delegates creation to AnimalFactory.
+// reads animal details from the console and delegates creation to AnimalFactory
 public class AnimalReader {
     private final ConsoleInput input;
     private final AnimalFactory animalFactory = new AnimalFactory();

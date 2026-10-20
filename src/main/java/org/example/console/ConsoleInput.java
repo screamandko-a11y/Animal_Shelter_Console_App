@@ -2,6 +2,9 @@ package org.example.console;
 
 import java.util.Scanner;
 
+
+// this class handles user inputs from the console
+//
 public class ConsoleInput {
     private final Scanner scanner;
 
