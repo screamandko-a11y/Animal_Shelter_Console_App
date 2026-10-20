@@ -1,17 +1,15 @@
 package org.example.console;
 
+import lombok.RequiredArgsConstructor;
 import org.example.model.Animal;
 
 
 // reads animal details from the console and delegates creation to AnimalFactory
+
+@RequiredArgsConstructor
 public class AnimalReader {
     private final ConsoleInput input;
     private final AnimalFactory animalFactory = new AnimalFactory();
-
-
-    public AnimalReader(ConsoleInput input) {
-        this.input = input;
-    }
 
     public String readSpecies() {
         return input.readChoice("Type (Dog, Cat, Bird): ", "Dog", "Cat", "Bird");

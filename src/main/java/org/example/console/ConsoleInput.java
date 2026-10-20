@@ -1,16 +1,15 @@
 package org.example.console;
 
+import lombok.RequiredArgsConstructor;
+
 import java.util.Scanner;
 
 
 // this class handles user inputs from the console
 //
+@RequiredArgsConstructor
 public class ConsoleInput {
     private final Scanner scanner;
-
-    public ConsoleInput(Scanner scanner) {
-        this.scanner = scanner;
-    }
 
     public String readNonEmptyString(String prompt) {
         while (true) {
