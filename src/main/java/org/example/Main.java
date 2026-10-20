@@ -21,6 +21,7 @@ public class Main {
         shelter.addAnimal(animalFactory.create("Dog", "Buddy", 3));
         shelter.addAnimal(animalFactory.create("Cat", "Luna", 5));
         shelter.addAnimal(animalFactory.create("Bird", "Kiwi", 1));
+        shelter.addAnimal(animalFactory.create("Mouse", "Snowball", 2));
 
         // create a ConsoleMenu object
         ConsoleMenu consoleMenu = new ConsoleMenu(shelter, input);

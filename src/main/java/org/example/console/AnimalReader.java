@@ -12,7 +12,7 @@ public class AnimalReader {
     private final AnimalFactory animalFactory = new AnimalFactory();
 
     public String readSpecies() {
-        return input.readChoice("Type (Dog, Cat, Bird): ", "Dog", "Cat", "Bird");
+        return input.readChoice("Type (Dog, Cat, Bird, Mouse): ", "Dog", "Cat", "Bird", "Mouse");
     }
 
 
