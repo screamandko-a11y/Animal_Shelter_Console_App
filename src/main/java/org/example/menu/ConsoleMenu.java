@@ -29,7 +29,10 @@ public class ConsoleMenu {
                 case "2" -> shelter.getAllAnimals();
                 case "3" -> shelter.findBySpecies();
                 case "4" -> shelter.findAvailableAnimals();
-               //case "5" -> shelter.markAsAdopted(); // incomplete function
+                case "5" -> {
+                    String id = input.readNonEmptyString("Animal ID: ");
+                    shelter.markAsAdopted(id);
+                } // incomplete function
                 case "0" -> {
                     System.out.println("Goodbye!");
                     return;

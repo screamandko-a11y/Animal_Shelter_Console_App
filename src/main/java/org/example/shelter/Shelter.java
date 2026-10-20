@@ -58,9 +58,16 @@ public class Shelter <T extends Animal>{
         return availableAnimals;
     }
 
+    // print that animal is adopted
+    public void markAsAdopted(String id) {
+        for (T animal : animals) {
+            if (animal.getId().toString().equals(id)) {
+                animal.markAsAdopted();
+                System.out.println("Animal marked as adopted");
+                return;
+            }
+        }
 
-
-   // public void markAsAdopted(String id){
-
-    //}
+        System.out.println("Animal not found");
+    }
 }
